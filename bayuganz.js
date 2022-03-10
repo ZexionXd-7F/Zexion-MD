@@ -52,6 +52,7 @@ module.exports = Bayuu = async (Bayuu, m, chatUpdate, store) => {
         const pushname = m.pushName || "No Name"
         const botNumber = await Bayuu.decodeJid(Bayuu.user.id)
         const isCreator = [botNumber, ...global.owner].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
+        const isCreator2 = [botNumber, ...global.moderator].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
         const itsMe = m.sender == botNumber ? true : false
         const text = q = args.join(" ")
         const quoted = m.quoted ? m.quoted : m
@@ -436,11 +437,7 @@ Silahkan @${m.mentionedJid[0].split`@`[0]} untuk ketik terima/tolak`
             }
             break
             case 'sc': {
-                m.reply('Script : https://github.com/BayuuOFC/BAYUBOT-MD\n\n Dont Forget Give Star\n\nDonate :\n089525518325 (Gopay)\n081285866502 (Dana)\n081398003097 (Telkomsel)')
-            }
-            break
-            case 'jadibot': {
-            	Bayuu.sendMessage(m.chat, { image: { url: 'https://telegra.ph/file/b8e9858ffe686e0519d24.jpg' }, caption: `*JASA JADI BOT BY BAYU STORE*\n\nLIST HARGA JADIBOT:\n1 MINGGU : CLOSE\n2 MINGGU : CLOSE\n3 MINGGU : CLOSE\n1 BULAN : 15k\nPERMANENT : 25K\n\nMINAT? CHAT OWNER:\nwa.me/6281398003097\n*PAYMENT SCAN CODE QR DIATAS*` }, { quoted: m })
+                m.reply('Script : https://github.com/ZexionXd-7F/Zexion-MD\n\n Dont Forget Give Star\n\nDonate :\n083871194301 (Gopay)')
             }
             break
             case 'chat': {
@@ -965,13 +962,13 @@ break
                     await sleep(1500)
                     let btn = [{
                                 urlButton: {
-                                    displayText: 'Source Code',
-                                    url: 'https://github.com/BayuuOFC/BAYUBOT-MD'
+                                    displayText: 'REST API',
+                                    url: 'https://zexion-dev.herokuapp.com'
                                 }
                             }, {
-                                callButton: {
-                                    displayText: 'Number Phone Owner',
-                                    phoneNumber: '+62 812-8586-6502'
+                                urlButton: {
+                                    displayText: 'SOURCE CODE',
+                                    url: 'https://github.com/ZexionXd-7F/Zexion-MD'
                                 }
                             }, {
                                 quickReplyButton: {
@@ -1005,13 +1002,13 @@ break
 		    await sleep(1500)
 		    let btn = [{
                                 urlButton: {
-                                    displayText: 'Source Code',
-                                    url: 'https://github.com/BayuuOFC/BAYUBOT-MD'
+                                    displayText: 'REST API',
+                                    url: 'https://zexion-dev.herokuapp.com'
                                 }
                             }, {
-                                callButton: {
-                                    displayText: 'Number Phone Owner',
-                                    phoneNumber: '+62 812-8586-6502'
+                                urlButton: {
+                                    displayText: 'SOURCE CODE',
+                                    url: 'https://github.com/ZexionXd-7F/Zexion-MD'
                                 }
                             }, {
                                 quickReplyButton: {
@@ -1376,13 +1373,14 @@ break
                             hydratedContentText: anu,
                             hydratedButtons: [{
                                 urlButton: {
-                                    displayText: 'Source Code',
-                                    url: 'https://github.com/BayuuOFC/BAYUBOT-MD'
+                                    urlButton: {
+                                    displayText: 'REST API',
+                                    url: 'https://zexion-dev.herokuapp.com'
                                 }
                             }, {
-                                callButton: {
-                                    displayText: 'Call Owner',
-                                    phoneNumber: '+62 813-9800-3097'
+                                urlButton: {
+                                    displayText: 'SOURCE CODE',
+                                    url: 'https://github.com/ZexionXd-7F/Zexion-MD'
                                 }
                             }, {
                                 quickReplyButton: {
@@ -2326,7 +2324,7 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
             }
             break
             case 'owner': case 'creator': {
-                Bayuu.sendContact(m.chat, global.owner, m)
+                Bayuu.sendContact(m.chat, global.moderator, m)
             }
             break
             case 'list': case 'menu': case 'help': case '?': {
@@ -2547,28 +2545,28 @@ ${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Obje
                             hydratedContentText: anu,
                             hydratedButtons: [{
                                 urlButton: {
-                                    displayText: 'Source Code',
-                                    url: 'https://github.com/BayuuOFC/BAYUBOT-MD'
+                                    displayText: 'REST API',
+                                    url: 'https://zexion-dev.herokuapp.com'
                                 }
                             }, {
-                                callButton: {
-                                    displayText: 'Number Phone Owner',
-                                    phoneNumber: '+62 812-8586-6502'
+                                urlButton: {
+                                    displayText: 'SOURCE CODE',
+                                    url: 'https://github.com/ZexionXd-7F/Zexion-MD'
                                 }
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'Thanks To',
+                                    displayText: 'THANKS TO',
                                     id: 'tqto'
                                 }
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'Owner Bot',
+                                    displayText: 'OWNER BOT',
                                     id: 'owner'
                                 }  
                             }, {
                                 quickReplyButton: {
-                                    displayText: 'JadiBot',
-                                    id: 'jadibot'
+                                    displayText: 'INFO SCRIPT',
+                                    id: 'sc'
                                 }
                             }]
                         }
