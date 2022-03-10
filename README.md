@@ -31,6 +31,13 @@ npm install
 ```
 
 
+## FOR HEROKU
+```bash
+heroku/nodejs
+https://github.com/DuckyTeam/heroku-buildpack-imagemagick.git
+https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git
+
+
 ## FOR TERMUX/UBUNTU/SSH USER
 
 ```bash
