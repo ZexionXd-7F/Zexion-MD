@@ -1373,7 +1373,6 @@ break
                             hydratedContentText: anu,
                             hydratedButtons: [{
                                 urlButton: {
-                                    urlButton: {
                                     displayText: 'REST API',
                                     url: 'https://zexion-dev.herokuapp.com'
                                 }
