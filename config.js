@@ -19,6 +19,7 @@ global.APIKeys = {
 
 // Other
 global.owner = ['6283871194301']
+global.moderator = ['6287850631109']
 global.packname = 'ZexionXd-7F'
 global.author = 'ZexionXd-MD'
 global.sessionName = 'session'
